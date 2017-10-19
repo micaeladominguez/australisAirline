@@ -7,7 +7,7 @@ public class Airplane {
 
     public Airplane(String code) {
         this.code = code;
-        Map<SeatLocation, Seat> seatMap = new HashMap<>();
+        Map<String, Seat> seatMap = new HashMap<>();
     }
 
     public String getCode() {

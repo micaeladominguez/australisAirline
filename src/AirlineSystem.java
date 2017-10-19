@@ -9,9 +9,9 @@ public class AirlineSystem {
 
     private List<AirplaneTicket> airplaneTickets;
     private List<Flight> flights;
-    private List<Passenger> passengers;
+    private List<Passenger> passengers;// porque el sistema sabria todos los pasajeros? sabiendo los vuelos y los vuelos conociendo sus pasajero ya esta
     private List<Pilot> pilot;
-    private Seat seat;
+    private Seat seat; //porque???
 
     private AirlineSystem() {
         airplaneTickets = new ArrayList<>();
