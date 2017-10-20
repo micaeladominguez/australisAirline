@@ -5,30 +5,35 @@ import java.util.List;
  * Author: micaeladominguez
  * Date: 13/10/17
  */
-public class StaffAirplaneSystem {
+public class StaffAirplaneSystem extends AirlineSystem {
     private List<Pilot>pilots;
-    private List<OnBoardStaff> staff;
+    private List<Employee> employees;
 
     private StaffAirplaneSystem() {
+        //super();
         pilots= new ArrayList<>();
-        staff= new ArrayList<>();
+        employees= new ArrayList<>();
     }
-    private String consultStatus(Pilot pilot){
+
+    private String consultItinerary(Pilot pilot){
         for (Pilot p : pilots){
             if(pilot.getId() == p.getId()){
                 return pilot.getFlightcode();
             }
         }
-        return "usted no esta registrado en la base de datos de pilotos";
+        return "has no flights to perform";
     }
-    private String consultStatus(OnBoardStaff s){
-        for (OnBoardStaff staff1: staff){
-            if (s.getId()==staff1.getId()){
-                return staff1.getFlightcode();
+
+    private String consultItinerary(Employee e){
+        for (Employee employee: employees){
+            if (e.getId()==employee.getId()){
+                return employee.getFlightcode();
             }
         }
-        return "usted no esta registrado en la base de datos de la tripulacion";
+        return "has no flights to perform";
     }
-
-
 }
+
+/*
+como esta clase extiende de AirlineSystem tenemos que buscar a forma de que pued acceder a las listas.
+ */

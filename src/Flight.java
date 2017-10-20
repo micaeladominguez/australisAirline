@@ -12,7 +12,8 @@ class Flight {
     private final Date date;
     private final int scales;
 
-    Flight(Airport originAirport, Airport arrivalAirport, Airplane airplane, String code, Pilot pilot, Date date, int scales) {
+    Flight(Airport originAirport, Airport arrivalAirport, Airplane airplane,
+           String code, Pilot pilot, Date date, int scales) {
         staffList = new ArrayList<>();
         this.originAirport = originAirport;
         this.arrivalAirport = arrivalAirport;
@@ -51,3 +52,7 @@ class Flight {
         return pilot;
     }
 }
+
+/*
+ hay que ver lo de las fechas, los vuelos tienen que tener una fecha de llegada y salida.
+ */

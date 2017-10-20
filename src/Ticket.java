@@ -15,7 +15,12 @@ public class Ticket {
     double getBalance() {
         return balance;
     }
+
     String getTicketNumber() {
         return ticketNumber;
     }
 }
+
+/*
+yo creo que el sistema tiene que tener una lista de comprobantes para contabilizar ganancias, y saber que venden, etc
+ */
