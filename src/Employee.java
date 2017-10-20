@@ -1,10 +1,10 @@
-public class OnBoardStaff {
+public class Employee {
 
     private boolean isAvailable;
     private final int id;
     private final String name;
 
-    OnBoardStaff(int id, String name) {
+    Employee(int id, String name) {
         this.isAvailable = true;
         this.id = id;
         this.name = name;

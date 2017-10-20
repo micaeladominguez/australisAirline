@@ -3,15 +3,16 @@ import java.util.List;
 
 class Flight {
 
-    private final List<OnBoardStaff> staffList;
+    private final List<Employee> staffList;
     private final Airport originAirport;
     private final Airport arrivalAirport;
     private final Airplane airplane;
     private final String code;
     private final Pilot pilot;
-    private Date date;
+    private final Date date;
+    private final int scales;
 
-    Flight(Airport originAirport, Airport arrivalAirport, Airplane airplane, String code, Pilot pilot, Date date) {
+    Flight(Airport originAirport, Airport arrivalAirport, Airplane airplane, String code, Pilot pilot, Date date, int scales) {
         staffList = new ArrayList<>();
         this.originAirport = originAirport;
         this.arrivalAirport = arrivalAirport;
@@ -19,9 +20,14 @@ class Flight {
         this.code = code;
         this.pilot = pilot;
         this.date = date;
+        this.scales = scales;
     }
 
-    Date getDate(){
+    int getScales() {
+        return scales;
+    }
+
+    Date getDate() {
         return date;
     }
 

@@ -5,33 +5,40 @@ import java.util.List;
  * Author: micaeladominguez
  * Date: 13/10/17
  */
-public class AirlineSystem {
+public abstract class AirlineSystem {
 
-    private List<AirplaneTicket> airplaneTickets;
-    private List<Flight> flights;
-    private List<Passenger> passengers;
-    private List<Pilot> pilot;
+    private final List<AirplaneTicket> airplaneTickets;
+    private final List<Flight> flights;
+    private final List<Passenger> clients;
+    private final List<Pilot> pilot;
     private Seat seat;
+    private int scales;
 
     private AirlineSystem() {
         airplaneTickets = new ArrayList<>();
         flights = new ArrayList<>();
-        passengers = new ArrayList<>();
+        clients = new ArrayList<>();
         pilot = new ArrayList<>();
     }
 
     private List<Flight> searchFlights(Airport origin, Airport destination) {
         final List<Flight> myFlights = new ArrayList<>();
         for (Flight flight : flights) {
-            if (flight.getOriginAirport().equals(origin) && flight.getArrivalAirport().equals(destination)){
+            if (flight.getOriginAirport().equals(origin) && flight.getArrivalAirport().equals(destination)) {
                 myFlights.add(flight);
             }
         }
         return myFlights;
     }
 
-    AirplaneTicket buyTicket(String code, Passenger passenger, Seat seat) {
-
+    private List<Flight> searchFlights(int scales){
+        final List<Flight> myFlights = new ArrayList<>();
+        for (Flight flight: flights) {
+            if (flight.getScales() == scales) {
+                myFlights.add(flight);
+            }
+        }
+        return myFlights;
     }
 
     void showFlights() {
@@ -39,4 +46,5 @@ public class AirlineSystem {
             System.out.println("Flight: " + flight + " Code: " + flight.getCode());
         }
     }
+
 }

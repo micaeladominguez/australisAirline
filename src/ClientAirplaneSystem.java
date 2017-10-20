@@ -5,8 +5,6 @@
 public class ClientAirplaneSystem {
 
     private ClientAirplaneSystem() {
-
     }
-
 
 }
