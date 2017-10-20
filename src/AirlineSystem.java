@@ -11,8 +11,6 @@ public abstract class AirlineSystem {
     private final List<Flight> flights;
     private final List<Passenger> clients;
     private final List<Pilot> pilot;
-    private Seat seat;
-    private int scales;
 
     private AirlineSystem() {
         airplaneTickets = new ArrayList<>();

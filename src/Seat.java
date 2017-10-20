@@ -2,24 +2,25 @@
 public class Seat {
 
     private final TypeSeat typeSeat;
-    private final SeatLocation seatLocation;
     private boolean isEmpty;
+    private String seatlocation;
 
-    public Seat(TypeSeat typeSeat, SeatLocation seatLocation, boolean isEmpty) {
+    public Seat(TypeSeat typeSeat,int seatRow,char seatColumn) {
         this.typeSeat = typeSeat;
-        this.seatLocation = seatLocation;
         this.isEmpty = true;
+        seatlocation= ""+seatRow+seatColumn;
     }
 
     public TypeSeat getTypeSeat() {
         return typeSeat;
     }
 
-    public SeatLocation getSeatLocation() {
-        return seatLocation;
+    public String getSeatlocation() {
+        return seatlocation;
     }
 
     public boolean isEmpty() {
+
         return isEmpty;
     }
 }
