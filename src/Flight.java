@@ -10,7 +10,7 @@ class Flight {
     private final String code;
     private final Pilot pilot;
     private final Date date;
-    private final int scales;
+    //private final int scales;
 
     Flight(Airport originAirport, Airport arrivalAirport, Airplane airplane,
            String code, Pilot pilot, Date date, int scales) {
@@ -21,12 +21,12 @@ class Flight {
         this.code = code;
         this.pilot = pilot;
         this.date = date;
-        this.scales = scales;
+        //this.scales = scales;
     }
 
-    int getScales() {
+    /*int getScales() {
         return scales;
-    }
+    }*/
 
     Date getDate() {
         return date;

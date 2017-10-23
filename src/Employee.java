@@ -9,7 +9,7 @@ public class Employee {
         this.isAvailable = true;
         this.id = id;
         this.name = name;
-        flightcode = "You are not assigned to any flight  currently";
+        flightcode = "You are not assigned to any flight currently";
     }
 
     public boolean isAvailable() {
@@ -24,7 +24,20 @@ public class Employee {
         return name;
     }
     public void setFlightcode(String code){
-        flightcode="estas asignado al vuelo" +code;
+        flightcode="You are assigned to the flight: " +code;
+    }
+
+    public void setAvailable(){
+        isAvailable = true;
+    }
+
+    public void setNoAvailable(){
+        isAvailable = false;
+        flightcode = "You are not assigned to any flight currently";
+    }
+
+    public void removeFlightcode(){
+        flightcode = "You are not assigned to any flight currently";
     }
 
     public String getFlightcode() {
