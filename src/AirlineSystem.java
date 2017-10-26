@@ -31,7 +31,7 @@ abstract class AirlineSystem {
         return myFlights;
     }
 
-    private List<Flight> searchFlights(int scales){ //falta agregar "Airport origin, Airport destination" tema filtros
+    /*private List<Flight> searchFlights(int scales){ //falta agregar "Airport origin, Airport destination" tema filtros
         final List<Flight> myFlights = new ArrayList<>();
         for (Flight flight: flights) {
             if (flight.getScales() == scales) {
@@ -39,7 +39,8 @@ abstract class AirlineSystem {
             }
         }
         return myFlights;
-    }
+    }*/
+    // ESTA COMENTADO ya que el metodo getScales no esta terminado y no permite compilar.
 
     void showFlights() {
         for (Flight flight : flights) {
