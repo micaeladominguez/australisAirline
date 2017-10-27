@@ -1,3 +1,5 @@
+import Plane.Seat;
+
 class AirplaneTicket {
 
     private final Flight flight;

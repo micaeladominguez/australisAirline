@@ -1,3 +1,5 @@
+import Plane.Airplane;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,6 +12,10 @@ class Flight {
     private final String code;
     private final Pilot pilot;
     private final Date date;
+    private Date startDate;
+    private Date finalDate;
+    private int priceBusiness;
+    private int priceEconomic;
     //private final int scales;
 
     Flight(Airport originAirport, Airport arrivalAirport, Airplane airplane,

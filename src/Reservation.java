@@ -1,3 +1,5 @@
+import Plane.Seat;
+
 public class Reservation {
 
     private final Passenger passenger;
