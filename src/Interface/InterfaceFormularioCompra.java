@@ -1,11 +1,15 @@
+package Interface;
+
 import java.util.Scanner;
 
-public class Interface {
+public class InterfaceFormularioCompra {
 
     public static void main(String[] args) {
 
         //elegir mejores nombres para variables y en ingles, estoy poco inspirado
         //se puede mejorar los textos de los sout
+
+        //falta agregar otra categoria para ver sus reservas
 
 
         //informacion visual
@@ -27,7 +31,7 @@ public class Interface {
 
         while (true) {
 
-            Scanner scanner = new Scanner(System.in);
+            Scanner respuestaUser = new Scanner(System.in);
 
 
             System.out.println("1. Aeropuerto   de   origen   y   destino: ");
@@ -45,7 +49,7 @@ public class Interface {
             System.out.println("7. Confirmar");
             System.out.println("8. Salir del programa ???"); //no se si poner esto
 
-            int respuesta = scanner.nextInt();
+            int respuesta = respuestaUser.nextInt();
             clearScreen();
 
             switch (respuesta) {
